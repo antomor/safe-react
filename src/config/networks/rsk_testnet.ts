@@ -3,12 +3,13 @@ import { EnvironmentSettings, ETHEREUM_NETWORK, FEATURES, NetworkConfig, WALLETS
 import { ETHGASSTATION_API_KEY } from 'src/utils/constants'
 
 const baseConfig: EnvironmentSettings = {
-  // clientGatewayUrl: 'http://127.0.0.1:8000/v1',
-  // txServiceUrl: 'https://safe-transaction.testnet.rifos.org/api/v1',
-  clientGatewayUrl: 'http://127.0.0.1:3666/v1',
-  txServiceUrl: 'http://127.0.0.1:8000/api/v1',
+  // clientGatewayUrl: 'http://127.0.0.1:3666/v1',
+  // txServiceUrl: 'http://127.0.0.1:8000/api/v1',
+  // safeUrl: 'http://localhost:3000/app',
+  clientGatewayUrl: 'https://safe-client-gateway.testnet.rifos.org/v1',
+  txServiceUrl: 'https://safe-transaction.testnet.rifos.org/api/v1',
+  safeUrl: 'https://safe.testnet.rifos.org/',
 
-  safeUrl: 'http://localhost:3000/app',
   // FIXME: To understand if we can use an oracle
   gasPrice: 65164000,
   /*   gasPriceOracle: {
