@@ -14,6 +14,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+      # `yarn` raises an error as already reported
+      # - https://github.com/yarnpkg/yarn/issues/7212
+      # - https://github.com/yarnpkg/yarn/issues/6312
+      # Among the solutions proposed there are:
+      #  - `yarn install --network-concurrency 1` -> very slow
+      #  - rm -rf ./yarn.lock && yarn             -> unpredictable install
+      #  - using a new cache folder               -> slower than normal, but the solution adopted at the moment
     - name: Install dependencies using an empty cache folder
       run: mkdir .yarncache && yarn install --cache-folder ./.yarncache && rm -rf .yarncache
 
