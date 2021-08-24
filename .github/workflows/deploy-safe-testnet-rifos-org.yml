@@ -14,8 +14,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: yarn
+    - name: Install dependencies using an empty cache folder
+      run: mkdir .yarncache && yarn install --cache-folder ./.yarncache && rm -rf .yarncache
 
     - name: Build site
       run: yarn build-rsk-testnet
