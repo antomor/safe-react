@@ -55,9 +55,9 @@ const Footer = (): React.ReactElement => {
 
   return (
     <footer className={classes.footer}>
-      <span className={classes.item}>©{date.getFullYear()} Gnosis</span>
+      <span className={classes.item}>©{date.getFullYear()} RSK</span>
       <span className={classes.sep}>|</span>
-      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/terms">
+      {/* <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/terms">
         Terms
       </Link>
       <span className={classes.sep}>|</span>
@@ -71,14 +71,14 @@ const Footer = (): React.ReactElement => {
       <span className={classes.sep}>|</span>
       <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/imprint">
         Imprint
-      </Link>
+      </Link>*/}
       <span className={classes.sep}>|</span>
-      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/cookie">
-        Cookie Policy
+      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://www.rsk.co/privacy-policy">
+        Privacy Policy
       </Link>
       <span className={classes.sep}>-</span>
       <GnoButtonLink className={cn(classes.item, classes.link, classes.buttonLink)} onClick={openCookiesHandler}>
-        Preferences
+        Cookie Preferences
       </GnoButtonLink>
       <span className={classes.sep}>|</span>
       <Link

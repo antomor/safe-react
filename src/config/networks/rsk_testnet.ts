@@ -59,7 +59,7 @@ const rskTestnet: NetworkConfig = {
     },
   },
   disabledWallets: [WALLETS.FORTMATIC],
-  disabledFeatures: [FEATURES.SAFE_APPS],
+  disabledFeatures: [FEATURES.SAFE_APPS, FEATURES.ERC721],
 }
 
 export default rskTestnet
